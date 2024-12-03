@@ -7,7 +7,7 @@ const debugInfo = document.getElementById('debug-info');
 const frameCount = 87; // Bilder von 200 bis 286
 
 // Funktion, um den Bildpfad zu generieren
-const currentFrame = (index) => `images/Sequenz ${index.toString().padStart(4, '0')}.jpg`;
+const currentFrame = (index) => `images/Sequenz_${index.toString().padStart(4, '0')}.webp`;
 
 // Array für die Bilder
 const images = [];
@@ -95,7 +95,7 @@ window.addEventListener('resize', () => {
 
 // Test-Render für ein Bild, um sicherzustellen, dass das Canvas funktioniert
 const testImage = new Image();
-testImage.src = 'images/Sequenz 0200.jpg';
+testImage.src = 'images/Sequenz_0200.webp';
 testImage.onload = () => {
   context.drawImage(testImage, 0, 0, canvas.width, canvas.height);
   updateDebugInfo(`Testbild geladen: ${testImage.src}`);
